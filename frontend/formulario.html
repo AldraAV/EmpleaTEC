@@ -2,133 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>EmpleaTEC</title>
-  <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #333333;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmpleaTEC | Conexión Laboral y Seguimiento - TecNM / ITSNa</title>
 
-    
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: #ffffff;
-    }
+  <!-- Identidad de Marca y Favicon Oficial -->
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg">
+  <link rel="alternate icon" type="image/svg+xml" href="../assets/favicon.svg">
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0076ce;
-    }
+  <meta name="description" content="Plataforma de conexión laboral y seguimiento de egresados de Tecnologías de la Información y Comunicaciones del Instituto Tecnológico Superior de Naranjos.">
+  <meta name="theme-color" content="#1856a2">
 
-    
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #555555;
-      font-size: 15px;
-    }
+  <!-- Fuentes Oficiales: Space Grotesk, Inter, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-    nav a:hover {
-      color: #0076ce;
-    }
-
-    /* Botón del menú */
-    .btn-publicar {
-      background-color: #0084ff;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .contenido-principal {
-      padding: 80px 50px;
-      max-width: 600px;
-    }
-
-    .contenido-principal h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      color: #1e293b;
-    }
-
-    .contenido-principal span {
-      color: #0084ff;
-    }
-
-    .contenido-principal p {
-      font-size: 18px;
-      color: #666666;
-      line-height: 1.5;
-      margin-bottom: 30px;
-    }
-
-    .btn-explorar {
-      display: inline-block;
-      background-color: #0084ff;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      color: #aaaaaa;
-      font-size: 13px;
-    }
-  </style>
+  <!-- Estilos Maestros (Vanilla CSS Puro) -->
+  <link rel="stylesheet" href="../static/css/estilos.css">
 </head>
 <body>
 
-  
-  <header>
-    <div class="logo">
-      EMPLEATEC
-    </div>
-    
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Alumnos</a>
-      <a href="#">Empresas</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Contacto</a>
-      <a href="#">Oficina</a>
-    </nav>
+  <!-- ==========================================================================
+       Barra de Navegación Superior (Navbar)
+       ========================================================================== -->
+  <header class="barra-navegacion">
+    <div class="contenedor-navegacion">
+      <!-- El logotipo SVG ya incluye el símbolo y el texto oficial EmpleaTEC -->
+      <a href="#inicio" class="marca-logotipo" title="EmpleaTEC - Inicio">
+        <img src="../static/assets/logo.svg" onerror="this.src='assets/logo.svg'" alt="EmpleaTEC" class="logotipo-oficial">
+      </a>
 
-    <a href="#" class="btn-publicar">Publicar Oferta</a>
+      <nav>
+        <ul class="menu-enlaces">
+          <li><a href="#inicio" class="enlace-navegacion activo">Inicio</a></li>
+          <li><a href="alumnos.html##alumnos" class="enlace-navegacion">Alumnos</a></li>
+          <li><a href="empresas.html##empresas" class="enlace-navegacion">Empresas</a></li>
+          <li><a href="#vacantes" class="enlace-navegacion">Vacantes</a></li>
+          <li><a href="#nosotros" class="enlace-navegacion">Nosotros</a></li>
+          <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="acciones-navegacion">
+        <a href="#iniciar-sesion" class="boton-acceso" id="boton-iniciar-sesion">
+          Iniciar Sesión
+        </a>
+      </div>
+    </div>
   </header>
 
-  <section class="contenido-principal">
-    <h1>Bienvenidos a <span>EmpleaTEC</span></h1>
-    <p>La plataforma ideal para conectar talento estudiantil con empresas innovadoras del ITSNa.</p>
-    <a href="#" class="btn-explorar">Explorar Vacantes</a>
-  </section>
+  <main>
+    <!-- ==========================================================================
+         Sección Hero (Composición idéntica a la Landing Page en Canva)
+         ========================================================================== -->
+    <section class="seccion-hero" id="inicio">
+      <div class="cuadricula-hero">
 
-  <footer>
-    © 2026 EmpleaTEC - Instituto Tecnológico Superior. Todos los derechos reservados.
+        <!-- Columna de Texto -->
+        <div class="columna-texto-hero">
+          <h1 class="titulo-hero">
+            Bienvenidos a
+            <span class="destacado-empleatec">EmpleaTEC</span>
+          </h1>
+
+          <p class="subtitulo-hero">
+            La plataforma ideal para conectar talento estudiantil con empresas innovadoras del sector tecnológico.
+          </p>
+
+          <div class="contenedor-cta-hero">
+            <a href="#vacantes" class="boton-cta-primario" id="boton-explorar-vacantes">
+              Explorar Vacantes
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna de Ilustración con el SVG de la gente -->
+        <div class="columna-ilustracion-hero">
+          <img src="../assets/EmpleaTEC Landing Page with Minimalistic Illustration (1).svg" onerror="this.src='static/assets/ilustracion_hero.svg'" alt="Ilustración Colaborativa EmpleaTEC" class="imagen-ilustracion-hero">
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Pie de Página Sencillo
+       ========================================================================== -->
+  <footer class="pie-pagina-sencillo">
+    <p>© 2026 EmpleaTEC • Instituto Tecnológico Superior de Naranjos (TecNM). </p> <br>
+    <p> Creado con amor y KnortZuisa. </p>
   </footer>
-
-<a href="alumnos.html"
-class="btn">Ver Alumnos</a>
-
-
-<a href="empresas.html"
-class="btn">Ver Empresas</a>
 
 </body>
 </html>
